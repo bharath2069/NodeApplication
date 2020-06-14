@@ -1,0 +1,42 @@
+html
+  head
+    title= title
+  body
+    h1
+      Name= message
+  form(action="logout", method="get")
+    .container
+      input(type="submit", value="Logout" class="button")
+  style.
+        h1
+        {
+          text-align:center
+        } 
+        .container
+        {
+          text-align:right
+        }
+
+  h2 Update your data
+  form(action="/updateEmail", method="post" autocomplete="off")
+    h3 Update Email
+    h4 Enter Old Email
+    input(type="text" name="Email1")
+    h4 Enter new Email
+    input(type="text" name="Email2")
+    input(type="submit", value="Update")
+  h3 Update Password
+  form(action="updatePassword", method="post" autocomplete="off")
+    h4 Enter Password
+    input(type="password", name="oldpassword")
+    h4 Enter new password
+    input(type="password", name="newpassword")
+    h4 Enter new password again to confirm
+    input(type="password", name="confirmpassword")
+    input(type="submit", value="Update")
+h3 Upload File
+    form(action="/upload", method="post" enctype="multipart/form-data")
+      input(type="file" name="avatar")
+      input(type="submit", value="upload")
+    
+

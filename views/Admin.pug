@@ -1,0 +1,26 @@
+doctype html
+html
+    head
+        title=title
+    body
+        h1
+            name=message
+    form(action="logout", method="get")
+        .container
+            input(type="submit", value="Logout" class="button")
+    form(action="getdatafromdb", method="get" autocomplete="off")
+        h2 Enter Username to get User data
+        input(type="text",name="Username")
+        input(type="submit", value="getdata" class="button")
+    form(action="viewdata", method="get")
+        h2 View All data from db
+        input(type="submit", value="viewalldata" class="button")
+    style.
+        h1
+        {
+            text-align:center
+        }
+        .container
+        {
+          text-align:right
+        }
